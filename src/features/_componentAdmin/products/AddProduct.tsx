@@ -153,7 +153,7 @@ const AddProduct = () => {
                           <Input
                             type="number"
                             placeholder="Giá"
-                            className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[336px]  hover:bg-gray-100 "
+                            className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[250px]  hover:bg-gray-100 "
                           />
                         </div>
                       </div>
@@ -188,7 +188,7 @@ const AddProduct = () => {
                           <Input
                             type="text"
                             placeholder="Giảm giá"
-                            className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[336px]  hover:bg-gray-100 "
+                            className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[250px]  hover:bg-gray-100 "
                           />
                         </div>
                       </div>
@@ -239,7 +239,7 @@ const AddProduct = () => {
                         <Input
                           type="text"
                           placeholder="Chi phí"
-                          className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[336px]  hover:bg-gray-100 "
+                          className="w-full rounded-full bg-background pl-11 md:w-[200px] lg:w-[250px]  hover:bg-gray-100 "
                         />
                       </div>
                     </div>
