@@ -10,7 +10,7 @@ import { RiApps2Line } from "react-icons/ri";
 const Header = () => {
   return (
     <div>
-      <div className="header flex justify-between items-center ">
+      <div className="headerAmin ">
         <div className="relative flex-1 md:grow-0 ">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input

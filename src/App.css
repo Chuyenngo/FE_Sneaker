@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "assets/style/client.scss";
 
-/* header admin  */
 .listIcons > li {
   align-items: center;
 }
