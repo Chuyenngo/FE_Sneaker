@@ -45,4 +45,5 @@ export const deleteProduct = async (id: string) => {
   } catch (error) {
     console.log("[API_DELETE_PRODUCT_ERROR]", error);
   }
+  //letuongthucommit
 };
