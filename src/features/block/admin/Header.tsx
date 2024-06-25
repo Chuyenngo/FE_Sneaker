@@ -6,11 +6,11 @@ import { IoMdSettings } from "react-icons/io"; // Import IoMdSync for spinning i
 import { MdOutlineWbSunny } from "react-icons/md";
 import { PiDiamondsFourDuotone } from "react-icons/pi";
 import { RiApps2Line } from "react-icons/ri";
-
+import "../../../assets/style/admin.scss";
 const Header = () => {
   return (
     <div>
-      <div className="headerAmin ">
+      <div className="headerAmin flex justify-between ">
         <div className="relative flex-1 md:grow-0 ">
           <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input

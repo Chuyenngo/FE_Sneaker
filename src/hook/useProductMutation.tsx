@@ -13,7 +13,7 @@ type FormControlType = {
   price: number;
   description: string;
   image: string;
-  category: string;
+  category_id: number;
 };
 
 type useProductMutationProps = {
@@ -24,12 +24,10 @@ type useProductMutationProps = {
 export const useProductMutation = ({
   action,
   defaultValues = {
-    id: "",
     name: "",
     price: 0,
     description: "",
     image: "",
-    category: "",
   },
   onSuccess,
 }: useProductMutationProps) => {

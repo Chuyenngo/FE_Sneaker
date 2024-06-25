@@ -1,13 +1,13 @@
 export interface IProduct {
-  id: string;
+  id: number;
   image: string;
   name: string;
   price: number;
   description: string;
-  category: string;
+  category_id: number;
 }
 export interface ICategory {
-  id: string;
+  id: number;
 
   name: string;
 }

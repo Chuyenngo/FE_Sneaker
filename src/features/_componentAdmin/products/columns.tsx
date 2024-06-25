@@ -1,5 +1,6 @@
 import { IProduct } from "@/common/type";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,6 +14,35 @@ import { Link } from "react-router-dom";
 export const getColumns = (
   onRemove: (product: IProduct) => void
 ): ColumnDef<IProduct>[] => [
+  {
+    id: "select",
+    header: ({ table }) => (
+      <Checkbox
+        checked={
+          table.getIsAllPageRowsSelected() ||
+          (table.getIsSomePageRowsSelected() && "indeterminate")
+        }
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+      />
+    ),
+    cell: ({ row }) => (
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+      />
+    ),
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("status")}</div>
+    ),
+  },
   {
     accessorKey: "name", // Đặt tên mới cho cột kết hợp
     header: "Tên sản phầm", // Tiêu đề cột
@@ -33,10 +63,29 @@ export const getColumns = (
   {
     accessorKey: "price",
     header: "Giá sản phẩm",
+    cell: ({ row }) => {
+      const price = row?.original.price;
+
+      return (
+        <div className="flex items-center">
+          <span>{price}</span>
+        </div>
+      );
+    },
   },
   {
     accessorKey: "category",
     header: "Loại",
+
+    cell: ({ row }) => {
+      const cate = row?.original.category_id;
+
+      return (
+        <div className="flex items-center">
+          <span>{cate}</span>
+        </div>
+      );
+    },
   },
 
   {

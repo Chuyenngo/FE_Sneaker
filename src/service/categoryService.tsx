@@ -12,7 +12,7 @@ export const getCategory = async () => {
     console.log("[API_FETCHING_Category_ERROR]", error);
   }
 };
-export const getOneCategory = async (id: string) => {
+export const getOneCategory = async (id: number) => {
   try {
     const response: AxiosResponse<ICategory> = await instance.get(
       `/categories/${id}`
@@ -43,7 +43,7 @@ export const editCategory = async (Category: ICategory) => {
     console.log("[API_UPDATE_Category_ERROR]", error);
   }
 };
-export const deleteCategory = async (id: string) => {
+export const deleteCategory = async (id: number) => {
   try {
     await instance.delete("/categories/" + id);
     return null;

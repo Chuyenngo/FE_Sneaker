@@ -10,7 +10,7 @@ export const getProducts = async () => {
     console.log("[API_FETCHING_PRODUCTS_ERROR]", error);
   }
 };
-export const getOneProduct = async (id: string) => {
+export const getOneProduct = async (id: number) => {
   try {
     const response: AxiosResponse<IProduct> = await instance.get(
       `/products/${id}`
@@ -38,7 +38,7 @@ export const editProduct = async (product: IProduct) => {
     console.log("[API_UPDATE_PRODUCT_ERROR]", error);
   }
 };
-export const deleteProduct = async (id: string) => {
+export const deleteProduct = async (id: number) => {
   try {
     await instance.delete("/products/" + id);
     return null;

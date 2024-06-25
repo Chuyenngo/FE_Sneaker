@@ -1,0 +1,42 @@
+.listIcons > li {
+  align-items: center;
+}
+.icon {
+  font-size: 30px;
+  color: #8996a4;
+  margin-right: 30px;
+  transition: all 0.2s ease-in;
+}
+.icon:hover {
+  font-size: 32px;
+  background-color: #dbe0e5;
+  margin-right: 28px;
+}
+
+/* header admin  */
+.listIcons > li {
+  align-items: center;
+}
+.icon {
+  font-size: 30px;
+  color: #8996a4;
+  margin-right: 30px;
+  transition: all 0.2s ease-in;
+}
+.icon:hover {
+  font-size: 32px;
+  background-color: #dbe0e5;
+  margin-right: 28px;
+}
+#icons_setting.icon {
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
